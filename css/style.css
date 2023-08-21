@@ -1,22 +1,135 @@
-html{
+@font-face {
+  font-family: "Helvitica", sans-serif;
+  src: url("../fonts/helvetica.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Helvitica-Bold", sans-serif;
+  src: url("../fonts/helvetica-bold.woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+html {
   box-sizing: border-box;
 }
 
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: inherit;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
 
-li{
+li {
   list-style: none;
 }
 
-img{
+img {
   max-width: 100%;
+}
+
+body {
+  font-family: "Helvitica", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #5c5c5c;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid #cacad6;
+  padding: 20px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.basket {
+  position: relative;
+}
+
+.basket span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  background-color: #000;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.welcome {
+  min-height: calc(100vh - 90px);
+  background: url('../images/welcome-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.welcome__title {
+  font-size: 96px;
+  padding-top: 16%;
+  font-weight: 400;
+}
+
+.welcome__subtitle {
+  font-size: 36px;
+}
+
+.welcome__text {
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+
+.buy-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 1px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background:linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+}
+
+.buy-btn__text {
+  color: #F6F4F5;
+  padding: 20px 110px;
+}
+
+.buy-btn__price {
+  background:#F6F4F5;
+  padding: 21px 106px;
+  font-weight: 700;
+}
+
+.buy-btn__subtext {
+  font-size: 13px;
 }
