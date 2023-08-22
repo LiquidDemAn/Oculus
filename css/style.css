@@ -315,3 +315,67 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* OCULUS BUY */
+.oculus-buy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 150px 0 110px 0;
+  overflow: hidden;
+}
+
+.oculus-buy__bg {
+  position: absolute;
+  top: 25px;
+  font-size: 400px;
+  line-height: 350px;
+  font-weight: 700;
+  z-index: -1;
+
+  opacity: 0.1;
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: line-text 6s linear infinite;
+}
+
+.oculus-buy__img {
+  margin-bottom: 30px;
+}
+
+@keyframes line-text {
+  from {
+    transform: translate(115%);
+    transform-origin: left center;
+  }
+  to {
+    transform: translate(-115%);
+    transform-origin: right center;
+  }
+}
+
+/* EQUIPMENT */
+.equipment {
+  margin-bottom: 100px;
+}
+
+.equipment__inner {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.equipment__img {
+  margin-bottom: 10px;
+}
+
+.equipment__item--first {
+  grid-row: 1/-1;
+}
