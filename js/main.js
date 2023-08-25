@@ -1,6 +1,9 @@
 const buttonActiveClass = "tabs__btn--active";
 const tabActiveClass = "tabs__content-item--active";
 
+const menuBtn = document.querySelector(".menu-btn");
+const menu = document.querySelector(".menu");
+
 const defaultSelect = {
   button: document.querySelector(`.${buttonActiveClass}`),
   tab: document.querySelector(`.${tabActiveClass}`),
@@ -8,6 +11,10 @@ const defaultSelect = {
 
 const tabsBtns = document.querySelectorAll(".tabs__btn");
 const tabsContent = document.querySelectorAll(".tabs__content-item");
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("menu--active");
+});
 
 tabsBtns.forEach((btn) => {
   btn.addEventListener("click", (event) => {
